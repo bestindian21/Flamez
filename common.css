@@ -91,40 +91,4 @@ main {
 }
 
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .logo {
-        justify-content: center; /* Center logo on smaller screens */
-    }
 
-    .logo img {
-        max-height: 40px; /* Reduce maximum height on smaller screens */
-        margin-right: 5px; /* Reduce margin on smaller screens */
-    }
-
-    .logo h1 {
-        font-size: 2em; /* Reduce font size on smaller screens */
-    }
-
-    nav ul {
-        float: none;
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
-
-/* Additional media query for very small screens */
-@media (max-width: 480px) {
-    .logo img {
-        max-height: 30px; /* Further reduce maximum height on very small screens */
-    }
-
-    .logo h1 {
-        font-size: 1.5em; /* Further reduce font size on very small screens */
-    }
-}

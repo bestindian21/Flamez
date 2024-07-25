@@ -29,11 +29,14 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .logo img {
-    height: 55px;
-    margin-right: 10px;
+    font-size: 2.5em;
+    font-style: oblique;
+    text-decoration: underline;
+    text-decoration-color: #ff4400;
 }
 
 .logo h1 {
@@ -82,4 +85,31 @@ footer {
 
 main {
     padding-top: 100px; /* To account for the fixed header */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .logo {
+        justify-content: center; /* Center logo on smaller screens */
+    }
+
+    .logo img {
+        max-height: 40px; /* Reduce maximum height on smaller screens */
+        margin-right: 5px; /* Reduce margin on smaller screens */
+    }
+
+    .logo h1 {
+        font-size: 2em; /* Reduce font size on smaller screens */
+    }
+
+    nav ul {
+        float: none;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }

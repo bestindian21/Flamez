@@ -28,10 +28,16 @@ header {
     z-index: 1000;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-shrink: 0;
 }
 
 .logo img {
@@ -50,12 +56,11 @@ header {
 }
 
 nav ul {
-    float: right;
-    margin-top: 10px;
+    display: flex;
+    list-style-type: none;
 }
 
 nav ul li {
-    display: inline-block;
     margin-left: 15px;
 }
 
@@ -63,6 +68,7 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
+    white-space: nowrap;
 }
 
 /* Button styles */
@@ -95,10 +101,6 @@ main {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    header {
-        padding: 5px 0;
-    }
-
     .logo img {
         max-height: 35px;
         margin-right: 5px;
@@ -108,58 +110,48 @@ main {
         font-size: 1.8em;
     }
 
-    nav ul {
-        float: none;
-        text-align: center;
-        margin-top: 15px;
-    }
-
-    nav ul li {
-        display: inline-block;
-        margin: 5px 10px;
-    }
-
     nav ul li a {
         font-size: 14px;
     }
 
     main {
-        padding-top: 120px;
+        padding-top: 70px;
     }
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 10px;
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        margin-left: 0;
     }
 
     .logo img {
         max-height: 30px;
-        margin-right: 5px;
     }
 
     .logo h1 {
         font-size: 1.5em;
     }
 
-    nav ul li {
-        margin: 3px 5px;
-    }
-
     nav ul li a {
         font-size: 12px;
     }
 
-    .full-text {
-        display: none;
-    }
-
-    .short-text {
-        display: inline;
-    }
-
     main {
-        padding-top: 140px;
+        padding-top: 100px;
     }
 }
 

@@ -104,3 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
         cartPage.addEventListener('click', updateQuantity);
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('change', function() {
+        if(this.checked) {
+            nav.style.display = 'block';
+            setTimeout(() => {
+                nav.style.opacity = '1';
+                nav.style.visibility = 'visible';
+            }, 10);
+        } else {
+            nav.style.opacity = '0';
+            nav.style.visibility = 'hidden';
+            setTimeout(() => {
+                nav.style.display = 'none';
+            }, 300);
+        }
+    });
+});

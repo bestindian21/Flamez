@@ -40,11 +40,11 @@ header {
 }
 
 .logo h1 {
-    font-size: 4.5em;
+    font-size: 3.5em;
     font-style: oblique;
     text-decoration: underline;
     text-decoration-color: #ff4400;
-    margin-left: -10px;
+    margin-left: -15px;
 }
 
 nav ul {

@@ -1,4 +1,3 @@
-/* Reset and basic styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,53 +13,47 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
-/* Header styles */
 header {
     background: #000000;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .logo {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .logo img {
-    height: auto;
-    max-height: 40px;
-    max-width: 100%;
+    height: auto; /* Remove fixed height */
+    max-height: 55px; /* Set a maximum height */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
     margin-right: 10px;
 }
 
 .logo h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     font-style: oblique;
     text-decoration: underline;
     text-decoration-color: #ff4400;
-    white-space: nowrap;
 }
 
 nav ul {
-    display: flex;
-    list-style-type: none;
+    float: right;
+    margin-top: 10px;
 }
 
 nav ul li {
-    margin-left: 15px;
+    display: inline;
+    margin-left: 20px;
 }
 
 nav ul li a {
@@ -69,18 +62,6 @@ nav ul li a {
     font-size: 16px;
 }
 
-/* Hamburger menu styles */
-.menu-toggle {
-    display: none;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-}
-
-/* Button styles */
 .btn {
     display: inline-block;
     background: #ff4e00;
@@ -95,7 +76,6 @@ nav ul li a {
     background: #ff6200;
 }
 
-/* Footer styles */
 footer {
     background-color: #ff4400;
     color: #ffffff;
@@ -103,65 +83,45 @@ footer {
     padding: 20px 0;
 }
 
-/* Main content padding to account for fixed header */
 main {
-    padding-top: 80px;
+    padding-top: 100px; /* To account for the fixed header */
 }
 
-/* Responsive styles */
+
+/* Media query for smaller screens */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .menu-toggle {
-        display: none;
-    }
-
-    .menu-toggle:checked ~ nav {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #000000;
-        padding: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
+    .logo {
+        justify-content: center; /* Center logo on smaller screens */
     }
 
     .logo img {
-        max-height: 35px;
+        max-height: 40px; /* Reduce maximum height on smaller screens */
+        margin-right: 5px; /* Reduce margin on smaller screens */
     }
 
     .logo h1 {
-        font-size: 1.8em;
-    }
-    
-@media (max-width: 768px) {
-    nav {
-        /* ... existing styles ... */
-        transition: all 0.3s ease-in-out;
-        opacity: 0;
-        visibility: hidden;
+        font-size: 2em; /* Reduce font size on smaller screens */
     }
 
-    .menu-toggle:checked ~ nav {
-        opacity: 1;
-        visibility: visible;
+    nav ul {
+        float: none;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
 }
-    main {
-        padding-top: 70px;
+
+/* Additional media query for very small screens */
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 30px; /* Further reduce maximum height on very small screens */
+    }
+
+    .logo h1 {
+        font-size: 1.5em; /* Further reduce font size on very small screens */
     }
 }

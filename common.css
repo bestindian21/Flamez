@@ -53,13 +53,13 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .btn {

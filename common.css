@@ -147,7 +147,20 @@ main {
     .logo h1 {
         font-size: 1.8em;
     }
+    
+@media (max-width: 768px) {
+    nav {
+        /* ... existing styles ... */
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+    }
 
+    .menu-toggle:checked ~ nav {
+        opacity: 1;
+        visibility: visible;
+    }
+}
     main {
         padding-top: 70px;
     }

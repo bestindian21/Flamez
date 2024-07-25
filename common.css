@@ -44,7 +44,8 @@ header {
     height: auto;
     max-height: 40px;
     max-width: 100%;
-    margin-right: 10px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 .logo h1 {

@@ -34,6 +34,8 @@
 
 .product-item img {
     max-width: 100%;
+    max-height: 200px; /* Set a max height for the images */
+    object-fit: cover; /* Ensure images cover their area */
     border-radius: 5px;
     margin-bottom: 15px;
 }
@@ -41,6 +43,7 @@
 .product-item h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
+    flex-grow: 1; /* Ensure h3 takes available space */
 }
 
 .product-item .price {
@@ -52,4 +55,6 @@
 
 .product-item .btn {
     width: 100%;
+    align-self: flex-end; /* Align the button to the bottom */
+    margin-top: auto; /* Ensure button stays at the bottom */
 }

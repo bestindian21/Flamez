@@ -22,7 +22,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease;
-    height: 400px; /* Set a fixed height */
+    height: 500px; /* Set a fixed height */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Space out content evenly */
@@ -34,7 +34,7 @@
 
 .product-item img {
     max-width: 100%;
-    max-height: 200px; /* Set a max height for the images */
+    max-height: 300px; /* Set a max height for the images */
     object-fit: cover; /* Ensure images cover their area */
     border-radius: 5px;
     margin-bottom: 15px;
@@ -42,7 +42,7 @@
 
 .product-item h3 {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     flex-grow: 1; /* Ensure h3 takes available space */
 }
 
